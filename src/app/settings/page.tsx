@@ -135,7 +135,7 @@ export default function Settings() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-8">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Settings</h1>
+        <h1 className="hero text-2xl font-semibold">Settings</h1>
         <a href="/" className="text-sm text-blue-600 hover:underline dark:text-blue-400">
           ← Back to chat
         </a>

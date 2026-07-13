@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body className="h-dvh bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+      <body className="h-dvh bg-neutral-50 text-neutral-800 antialiased dark:bg-neutral-900 dark:text-neutral-100">
         {children}
       </body>
     </html>

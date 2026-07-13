@@ -227,10 +227,17 @@ export default function Workspace() {
         <div className="flex items-center gap-2 p-3">
           <button
             onClick={newChat}
-            className="flex-1 rounded-lg bg-neutral-900 px-3 py-2 text-sm font-medium text-white hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+            className="flex-1 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-500"
           >
             + New chat
           </button>
+          <a
+            href="/hub"
+            title="Dashboard"
+            className="rounded-lg border border-neutral-300 px-3 py-2 text-sm hover:bg-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-800"
+          >
+            ⌂
+          </a>
           <a
             href="/settings"
             title="Settings"
@@ -284,7 +291,9 @@ export default function Workspace() {
           <div className="mx-auto max-w-3xl px-4 py-6">
             {!msgs.length && (
               <div className="mt-24 text-center">
-                <h1 className="text-2xl font-semibold">AI Workspace</h1>
+                <h1 className="hero text-3xl font-semibold text-neutral-800 dark:text-neutral-100">
+                  AI Workspace
+                </h1>
                 <p className="mt-2 text-sm text-neutral-500">
                   One assistant, every provider. Pick a model or let Auto route for you.
                 </p>
@@ -337,7 +346,7 @@ export default function Workspace() {
                 <button
                   onClick={send}
                   disabled={!input.trim()}
-                  className="rounded-xl bg-neutral-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-40 dark:bg-neutral-100 dark:text-neutral-900"
+                  className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-500 disabled:opacity-40"
                 >
                   Send ↑
                 </button>
