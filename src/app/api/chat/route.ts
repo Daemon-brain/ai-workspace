@@ -23,6 +23,7 @@ import { buildCandidates, CHAT_DEFAULTS, getSetting, userIdFrom, ChatDefaults } 
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 60; // allow long streamed replies on serverless hosts
 
 const MAX_HISTORY_MESSAGES = 40;
 const MAX_HISTORY_CHARS = 80_000;
