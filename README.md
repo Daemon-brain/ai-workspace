@@ -5,6 +5,13 @@ combination of LLM providers, with automatic failover, smart model routing, and 
 Claude-style chat experience. Embed it in any web application — the host app owns
 authentication; this module owns everything AI.
 
+> ⚠️ **Security notice — read before deploying.** This module has **no built-in
+> authentication**: it trusts the `x-workspace-user` header from the host app
+> (see *Embedding contract*). If you expose a deployment publicly without putting
+> your own auth in front of it, anyone who reaches it can spend **your provider
+> API keys**. Put it behind your host app's login (or a reverse proxy with auth),
+> keep `WORKSPACE_SECRET` private, and never commit `.env`.
+
 **Core principle: the user never thinks about providers.** The orchestration layer
 decides which provider/model serves each request, when to retry, when to switch,
 and how to recover — invisibly.
